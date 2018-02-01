@@ -5,7 +5,7 @@
 
 	<groupId>people.data</groupId>
 	<artifactId>hadoop</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<packaging>jar</packaging>
 
 	<name>hadoop</name>
@@ -95,6 +95,11 @@
 	</build>
 
 	<repositories>
+        <repository>
+            <id>cloudera-repository</id>
+            <name>Cloudera Repository</name>
+            <url>https://repository.cloudera.com/content/repositories/releases/</url>
+        </repository>
 		<repository>
 			<id>spring-snapshots</id>
 			<name>Spring Snapshots</name>
@@ -110,11 +115,6 @@
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
-		</repository>
-		<repository>
-			<id>cloudera-repository</id>
-			<name>Cloudera Repository</name>
-			<url>https://repository.cloudera.com/content/repositories/releases/</url>
 		</repository>
 	</repositories>
 
