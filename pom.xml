@@ -111,6 +111,11 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
+		<repository>
+			<id>cloudera-repository</id>
+			<name>Cloudera Repository</name>
+			<url>https://repository.cloudera.com/content/repositories/releases/</url>
+		</repository>
 	</repositories>
 
 	<pluginRepositories>
