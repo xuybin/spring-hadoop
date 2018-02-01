@@ -1,27 +1,27 @@
 package people.data.hadoop;
 
 public class User {
-    String firstName;
-    String lastName;
+    String user;
+    String id;
 
-    public User(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public User(String id,String user) {
+        this.user = user;
+        this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getUser() {
+        return user;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setUser(String user) {
+        this.user = user;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getId() {
+        return id;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setId(String id) {
+        this.id = id;
     }
 }

@@ -99,7 +99,7 @@ ERROR in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - For more inform
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334)
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407)
-2018-02-01 21:54:20.909 [main] ERROR o.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4d154ccd] to prepare test instance [people.data.hadoop.HadoopApplicationTests@6e6f2380]
+2018-02-01 21:54:20.909 [main] ERROR o.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4d154ccd] to prepare test instance [people.data.hadoop.UserTest@6e6f2380]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:107)
@@ -153,14 +153,14 @@ ERROR in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - For more inform
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
 	... 28 common frames omitted
-2018-02-01 21:55:41.275 [main] INFO  people.data.hadoop.HadoopApplicationTests - Starting HadoopApplicationTests on DESKTOP-CFT1V6L with PID 6548 (started by xuybin in E:\bigdata\spring-hadoop)
-2018-02-01 21:55:41.275 [main] INFO  people.data.hadoop.HadoopApplicationTests - Starting HadoopApplicationTests on DESKTOP-CFT1V6L with PID 6548 (started by xuybin in E:\bigdata\spring-hadoop)
-2018-02-01 21:55:41.279 [main] DEBUG people.data.hadoop.HadoopApplicationTests - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
-2018-02-01 21:55:41.279 [main] DEBUG people.data.hadoop.HadoopApplicationTests - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
-2018-02-01 21:55:41.283 [main] INFO  people.data.hadoop.HadoopApplicationTests - No active profile set, falling back to default profiles: default
-2018-02-01 21:55:41.283 [main] INFO  people.data.hadoop.HadoopApplicationTests - No active profile set, falling back to default profiles: default
-2018-02-01 21:55:44.451 [main] INFO  people.data.hadoop.HadoopApplicationTests - Started HadoopApplicationTests in 3.912 seconds (JVM running for 5.57)
-2018-02-01 21:55:44.451 [main] INFO  people.data.hadoop.HadoopApplicationTests - Started HadoopApplicationTests in 3.912 seconds (JVM running for 5.57)
+2018-02-01 21:55:41.275 [main] INFO  people.data.hadoop.UserTest - Starting HadoopApplicationTests on DESKTOP-CFT1V6L with PID 6548 (started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-01 21:55:41.275 [main] INFO  people.data.hadoop.UserTest - Starting HadoopApplicationTests on DESKTOP-CFT1V6L with PID 6548 (started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-01 21:55:41.279 [main] DEBUG people.data.hadoop.UserTest - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-01 21:55:41.279 [main] DEBUG people.data.hadoop.UserTest - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-01 21:55:41.283 [main] INFO  people.data.hadoop.UserTest - No active profile set, falling back to default profiles: default
+2018-02-01 21:55:41.283 [main] INFO  people.data.hadoop.UserTest - No active profile set, falling back to default profiles: default
+2018-02-01 21:55:44.451 [main] INFO  people.data.hadoop.UserTest - Started HadoopApplicationTests in 3.912 seconds (JVM running for 5.57)
+2018-02-01 21:55:44.451 [main] INFO  people.data.hadoop.UserTest - Started HadoopApplicationTests in 3.912 seconds (JVM running for 5.57)
 2018-02-01 21:56:27.085 [main] INFO  people.data.hadoop.WebfluxApplication - Starting WebfluxApplication on DESKTOP-CFT1V6L with PID 3264 (E:\bigdata\spring-hadoop\target\classes started by xuybin in E:\bigdata\spring-hadoop)
 2018-02-01 21:56:27.085 [main] INFO  people.data.hadoop.WebfluxApplication - Starting WebfluxApplication on DESKTOP-CFT1V6L with PID 3264 (E:\bigdata\spring-hadoop\target\classes started by xuybin in E:\bigdata\spring-hadoop)
 2018-02-01 21:56:27.085 [main] DEBUG people.data.hadoop.WebfluxApplication - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
@@ -418,3 +418,75 @@ Caused by: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No ser
 	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:950)
 	at org.springframework.http.codec.json.AbstractJackson2Encoder.encodeValue(AbstractJackson2Encoder.java:135)
 	... 108 common frames omitted
+2018-02-01 21:58:58.317 [main] INFO  people.data.hadoop.WebfluxApplication - Starting WebfluxApplication on DESKTOP-CFT1V6L with PID 5940 (E:\bigdata\spring-hadoop\target\classes started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-01 21:58:58.317 [main] INFO  people.data.hadoop.WebfluxApplication - Starting WebfluxApplication on DESKTOP-CFT1V6L with PID 5940 (E:\bigdata\spring-hadoop\target\classes started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-01 21:58:58.317 [main] DEBUG people.data.hadoop.WebfluxApplication - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-01 21:58:58.317 [main] DEBUG people.data.hadoop.WebfluxApplication - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-01 21:58:58.321 [main] INFO  people.data.hadoop.WebfluxApplication - No active profile set, falling back to default profiles: default
+2018-02-01 21:58:58.321 [main] INFO  people.data.hadoop.WebfluxApplication - No active profile set, falling back to default profiles: default
+2018-02-01 21:59:02.257 [main] INFO  people.data.hadoop.WebfluxApplication - Started WebfluxApplication in 5.24 seconds (JVM running for 11.825)
+2018-02-01 21:59:02.257 [main] INFO  people.data.hadoop.WebfluxApplication - Started WebfluxApplication in 5.24 seconds (JVM running for 11.825)
+2018-02-01 22:16:27.637 [main] INFO  people.data.hadoop.WebfluxApplication - Starting WebfluxApplication on DESKTOP-CFT1V6L with PID 3408 (E:\bigdata\spring-hadoop\target\classes started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-01 22:16:27.637 [main] INFO  people.data.hadoop.WebfluxApplication - Starting WebfluxApplication on DESKTOP-CFT1V6L with PID 3408 (E:\bigdata\spring-hadoop\target\classes started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-01 22:16:27.641 [main] DEBUG people.data.hadoop.WebfluxApplication - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-01 22:16:27.641 [main] DEBUG people.data.hadoop.WebfluxApplication - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-01 22:16:27.645 [main] INFO  people.data.hadoop.WebfluxApplication - No active profile set, falling back to default profiles: default
+2018-02-01 22:16:27.645 [main] INFO  people.data.hadoop.WebfluxApplication - No active profile set, falling back to default profiles: default
+2018-02-01 22:16:31.941 [main] INFO  people.data.hadoop.WebfluxApplication - Started WebfluxApplication in 5.7 seconds (JVM running for 12.755)
+2018-02-01 22:16:31.941 [main] INFO  people.data.hadoop.WebfluxApplication - Started WebfluxApplication in 5.7 seconds (JVM running for 12.755)
+2018-02-01 22:18:00.951 [main] INFO  people.data.hadoop.UserTest - Starting UserTest on DESKTOP-CFT1V6L with PID 2668 (started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-01 22:18:00.951 [main] INFO  people.data.hadoop.UserTest - Starting UserTest on DESKTOP-CFT1V6L with PID 2668 (started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-01 22:18:00.951 [main] DEBUG people.data.hadoop.UserTest - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-01 22:18:00.951 [main] DEBUG people.data.hadoop.UserTest - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-01 22:18:00.955 [main] INFO  people.data.hadoop.UserTest - No active profile set, falling back to default profiles: default
+2018-02-01 22:18:00.955 [main] INFO  people.data.hadoop.UserTest - No active profile set, falling back to default profiles: default
+2018-02-01 22:18:05.266 [main] INFO  people.data.hadoop.UserTest - Started UserTest in 5.123 seconds (JVM running for 6.783)
+2018-02-01 22:18:05.266 [main] INFO  people.data.hadoop.UserTest - Started UserTest in 5.123 seconds (JVM running for 6.783)
+2018-02-01 23:03:36.691 [main] INFO  people.data.hadoop.WebfluxApplication - Starting WebfluxApplication on DESKTOP-CFT1V6L with PID 6204 (E:\bigdata\spring-hadoop\target\classes started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-01 23:03:36.691 [main] INFO  people.data.hadoop.WebfluxApplication - Starting WebfluxApplication on DESKTOP-CFT1V6L with PID 6204 (E:\bigdata\spring-hadoop\target\classes started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-01 23:03:36.695 [main] DEBUG people.data.hadoop.WebfluxApplication - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-01 23:03:36.695 [main] DEBUG people.data.hadoop.WebfluxApplication - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-01 23:03:36.699 [main] INFO  people.data.hadoop.WebfluxApplication - No active profile set, falling back to default profiles: default
+2018-02-01 23:03:36.699 [main] INFO  people.data.hadoop.WebfluxApplication - No active profile set, falling back to default profiles: default
+2018-02-01 23:03:40.591 [main] INFO  people.data.hadoop.WebfluxApplication - Started WebfluxApplication in 5.164 seconds (JVM running for 12.361)
+2018-02-01 23:03:40.591 [main] INFO  people.data.hadoop.WebfluxApplication - Started WebfluxApplication in 5.164 seconds (JVM running for 12.361)
+2018-02-01 23:19:35.676 [main] INFO  people.data.hadoop.WebfluxApplication - Starting WebfluxApplication on DESKTOP-CFT1V6L with PID 6888 (E:\bigdata\spring-hadoop\target\classes started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-01 23:19:35.676 [main] INFO  people.data.hadoop.WebfluxApplication - Starting WebfluxApplication on DESKTOP-CFT1V6L with PID 6888 (E:\bigdata\spring-hadoop\target\classes started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-01 23:19:35.700 [main] DEBUG people.data.hadoop.WebfluxApplication - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-01 23:19:35.700 [main] DEBUG people.data.hadoop.WebfluxApplication - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-01 23:19:35.704 [main] INFO  people.data.hadoop.WebfluxApplication - No active profile set, falling back to default profiles: default
+2018-02-01 23:19:35.704 [main] INFO  people.data.hadoop.WebfluxApplication - No active profile set, falling back to default profiles: default
+2018-02-01 23:19:39.748 [main] INFO  people.data.hadoop.WebfluxApplication - Started WebfluxApplication in 5.352 seconds (JVM running for 13.109)
+2018-02-01 23:19:39.748 [main] INFO  people.data.hadoop.WebfluxApplication - Started WebfluxApplication in 5.352 seconds (JVM running for 13.109)
+2018-02-01 23:19:57.769 [main] INFO  people.data.hadoop.WebfluxApplication - Starting WebfluxApplication on DESKTOP-CFT1V6L with PID 5608 (E:\bigdata\spring-hadoop\target\classes started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-01 23:19:57.769 [main] INFO  people.data.hadoop.WebfluxApplication - Starting WebfluxApplication on DESKTOP-CFT1V6L with PID 5608 (E:\bigdata\spring-hadoop\target\classes started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-01 23:19:57.773 [main] DEBUG people.data.hadoop.WebfluxApplication - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-01 23:19:57.773 [main] DEBUG people.data.hadoop.WebfluxApplication - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-01 23:19:57.773 [main] INFO  people.data.hadoop.WebfluxApplication - No active profile set, falling back to default profiles: default
+2018-02-01 23:19:57.773 [main] INFO  people.data.hadoop.WebfluxApplication - No active profile set, falling back to default profiles: default
+2018-02-01 23:20:02.013 [main] INFO  people.data.hadoop.WebfluxApplication - Started WebfluxApplication in 5.152 seconds (JVM running for 10.641)
+2018-02-01 23:20:02.013 [main] INFO  people.data.hadoop.WebfluxApplication - Started WebfluxApplication in 5.152 seconds (JVM running for 10.641)
+2018-02-01 23:21:17.700 [main] INFO  people.data.hadoop.WebfluxApplication - Starting WebfluxApplication on DESKTOP-CFT1V6L with PID 3804 (E:\bigdata\spring-hadoop\target\classes started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-01 23:21:17.700 [main] INFO  people.data.hadoop.WebfluxApplication - Starting WebfluxApplication on DESKTOP-CFT1V6L with PID 3804 (E:\bigdata\spring-hadoop\target\classes started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-01 23:21:17.704 [main] DEBUG people.data.hadoop.WebfluxApplication - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-01 23:21:17.704 [main] DEBUG people.data.hadoop.WebfluxApplication - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-01 23:21:17.708 [main] INFO  people.data.hadoop.WebfluxApplication - No active profile set, falling back to default profiles: default
+2018-02-01 23:21:17.708 [main] INFO  people.data.hadoop.WebfluxApplication - No active profile set, falling back to default profiles: default
+2018-02-01 23:21:21.708 [main] INFO  people.data.hadoop.WebfluxApplication - Started WebfluxApplication in 5.264 seconds (JVM running for 12.122)
+2018-02-01 23:21:21.708 [main] INFO  people.data.hadoop.WebfluxApplication - Started WebfluxApplication in 5.264 seconds (JVM running for 12.122)
+2018-02-01 23:21:56.165 [main] INFO  people.data.hadoop.WebfluxApplication - Starting WebfluxApplication on DESKTOP-CFT1V6L with PID 3612 (E:\bigdata\spring-hadoop\target\classes started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-01 23:21:56.165 [main] INFO  people.data.hadoop.WebfluxApplication - Starting WebfluxApplication on DESKTOP-CFT1V6L with PID 3612 (E:\bigdata\spring-hadoop\target\classes started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-01 23:21:56.165 [main] DEBUG people.data.hadoop.WebfluxApplication - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-01 23:21:56.165 [main] DEBUG people.data.hadoop.WebfluxApplication - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-01 23:21:56.165 [main] INFO  people.data.hadoop.WebfluxApplication - No active profile set, falling back to default profiles: default
+2018-02-01 23:21:56.165 [main] INFO  people.data.hadoop.WebfluxApplication - No active profile set, falling back to default profiles: default
+2018-02-01 23:22:00.385 [main] INFO  people.data.hadoop.WebfluxApplication - Started WebfluxApplication in 5.42 seconds (JVM running for 12.17)
+2018-02-01 23:22:00.385 [main] INFO  people.data.hadoop.WebfluxApplication - Started WebfluxApplication in 5.42 seconds (JVM running for 12.17)
+2018-02-01 23:23:05.300 [main] INFO  people.data.hadoop.UserTest - Starting UserTest on DESKTOP-CFT1V6L with PID 6580 (started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-01 23:23:05.300 [main] INFO  people.data.hadoop.UserTest - Starting UserTest on DESKTOP-CFT1V6L with PID 6580 (started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-01 23:23:05.304 [main] DEBUG people.data.hadoop.UserTest - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-01 23:23:05.304 [main] DEBUG people.data.hadoop.UserTest - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-01 23:23:05.308 [main] INFO  people.data.hadoop.UserTest - No active profile set, falling back to default profiles: default
+2018-02-01 23:23:05.308 [main] INFO  people.data.hadoop.UserTest - No active profile set, falling back to default profiles: default
+2018-02-01 23:23:10.036 [main] INFO  people.data.hadoop.UserTest - Started UserTest in 5.524 seconds (JVM running for 7.142)
+2018-02-01 23:23:10.036 [main] INFO  people.data.hadoop.UserTest - Started UserTest in 5.524 seconds (JVM running for 7.142)
