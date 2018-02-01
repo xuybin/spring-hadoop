@@ -1,4 +1,4 @@
-FROM httpd:alpine
+FROM alpine
 
 
 VOLUME ["/m2"]
