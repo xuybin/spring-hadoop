@@ -12,15 +12,14 @@
     </appender>
 
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+        <file>logs/${LogFileName}.log</file><!-- 当天文件名 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>logs/${LogFileName}-%d{yyyy-MM-dd}.log</fileNamePattern>
             <maxHistory>7</maxHistory>
-            <maxFileSize>1GB</maxFileSize>
         </rollingPolicy>
         <encoder><!-- 必须指定，否则不会往文件输出内容 -->
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
         </encoder>
-        <file>logs/${LogFileName}.log</file><!-- 当天文件名 -->
         <append>false</append>
         <prudent>false</prudent>
     </appender>
