@@ -3447,3 +3447,19 @@ java.io.IOException: 你的主机中的软件中止了一个已建立的连接�
 2018-02-02 13:54:58.434 [main] INFO  people.data.hadoop.CityTest - No active profile set, falling back to default profiles: default
 2018-02-02 13:55:03.293 [main] INFO  people.data.hadoop.CityTest - Started CityTest in 5.849 seconds (JVM running for 8.824)
 2018-02-02 13:55:03.293 [main] INFO  people.data.hadoop.CityTest - Started CityTest in 5.849 seconds (JVM running for 8.824)
+2018-02-02 14:01:56.565 [main] INFO  people.data.hadoop.CityTest - Starting CityTest on DESKTOP-CFT1V6L with PID 5932 (started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-02 14:01:56.565 [main] INFO  people.data.hadoop.CityTest - Starting CityTest on DESKTOP-CFT1V6L with PID 5932 (started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-02 14:01:56.568 [main] DEBUG people.data.hadoop.CityTest - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-02 14:01:56.568 [main] DEBUG people.data.hadoop.CityTest - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-02 14:01:56.572 [main] INFO  people.data.hadoop.CityTest - No active profile set, falling back to default profiles: default
+2018-02-02 14:01:56.572 [main] INFO  people.data.hadoop.CityTest - No active profile set, falling back to default profiles: default
+2018-02-02 14:02:01.283 [main] INFO  people.data.hadoop.CityTest - Started CityTest in 5.677 seconds (JVM running for 7.703)
+2018-02-02 14:02:01.283 [main] INFO  people.data.hadoop.CityTest - Started CityTest in 5.677 seconds (JVM running for 7.703)
+2018-02-02 14:02:44.366 [main] INFO  people.data.hadoop.CityTest - Starting CityTest on DESKTOP-CFT1V6L with PID 6344 (started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-02 14:02:44.366 [main] INFO  people.data.hadoop.CityTest - Starting CityTest on DESKTOP-CFT1V6L with PID 6344 (started by xuybin in E:\bigdata\spring-hadoop)
+2018-02-02 14:02:44.371 [main] DEBUG people.data.hadoop.CityTest - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-02 14:02:44.371 [main] DEBUG people.data.hadoop.CityTest - Running with Spring Boot v2.0.0.RC1, Spring v5.0.3.RELEASE
+2018-02-02 14:02:44.375 [main] INFO  people.data.hadoop.CityTest - No active profile set, falling back to default profiles: default
+2018-02-02 14:02:44.375 [main] INFO  people.data.hadoop.CityTest - No active profile set, falling back to default profiles: default
+2018-02-02 14:02:50.712 [main] INFO  people.data.hadoop.CityTest - Started CityTest in 7.272 seconds (JVM running for 9.449)
+2018-02-02 14:02:50.712 [main] INFO  people.data.hadoop.CityTest - Started CityTest in 7.272 seconds (JVM running for 9.449)
