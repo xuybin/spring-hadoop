@@ -8,7 +8,7 @@ RUN apk --update add --no-cache maven git openjdk8 \
  
  &&cd / && git clone https://github.com/xuybin/spring-hadoop.git && cd spring-hadoop \ 
 
- && mvn clean package && rm -rf spring-hadoop \
+ && mvn clean compile && rm -rf spring-hadoop \
 
  && cd /root/ && tar -zcf m2.tar.gz .m2/ && mv m2.tar.gz /m2tmp && rm -rf .m2 \
  
