@@ -120,6 +120,11 @@
 				<enabled>true</enabled>
 			</snapshots>
 		</repository>
+        <repository>
+            <id>central-repository</id>
+            <name>Central Repository</name>
+            <url>http://central.maven.org/maven2/</url>
+        </repository>
 	</repositories>
 
 	<pluginRepositories>
