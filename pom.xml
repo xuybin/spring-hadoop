@@ -105,7 +105,7 @@
         <repository>
             <id>spring-release</id>
             <name>Spring Release</name>
-            <url>http://repo.spring.io/release/</url>
+            <url>https://repo.spring.io/release/</url>
         </repository>
         <repository>
             <id>spring-milestones</id>
