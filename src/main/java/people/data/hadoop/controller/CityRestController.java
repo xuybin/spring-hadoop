@@ -29,7 +29,7 @@ public class CityRestController {
                 if(city==null){
                     cityMonoSink.error(new Exception("not find"+id));
                 }else {
-                    cityMonoSink.success(cityService.findCityById(id));
+                    cityMonoSink.success(city);
                 }
 
         });

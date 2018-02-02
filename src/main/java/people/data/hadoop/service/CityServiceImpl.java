@@ -1,4 +1,4 @@
-package people.data.hadoop.service.impl;
+package people.data.hadoop.service;
 
 import org.springframework.stereotype.Service;
 import people.data.hadoop.model.City;
