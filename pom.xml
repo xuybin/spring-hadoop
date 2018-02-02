@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>spring-hadoop</name>
-	<description>People Data for Hadoop</description>
+	<description>Springboot Webflux  Hadoop</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
