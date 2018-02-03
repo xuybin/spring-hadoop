@@ -87,6 +87,7 @@ public class ImportTsv extends Configured implements Tool {
   // TODO: the rest of these configs are used exclusively by TsvImporterMapper.
   // Move them out of the tool and let the mapper handle its own validation.
   public final static String SKIP_LINES_CONF_KEY = "importtsv.skip.bad.lines";
+  public final static String SKIP_EMPTY_COLUMNS = "importtsv.skip.empty.columns";
   public final static String COLUMNS_CONF_KEY = "importtsv.columns";
   public final static String SEPARATOR_CONF_KEY = "importtsv.separator";
   public final static String ATTRIBUTE_SEPERATOR_CONF_KEY = "attributes.seperator";
@@ -644,6 +645,7 @@ public class ImportTsv extends Configured implements Tool {
       "\n" +
       "Other options that may be specified with -D include:\n" +
       "  -D" + SKIP_LINES_CONF_KEY + "=false - fail if encountering an invalid line\n" +
+      "  -D" + SKIP_EMPTY_COLUMNS + "=false - If true then skip empty or null columns in bulk import\n" +
       "  '-D" + SEPARATOR_CONF_KEY + "=|' - eg separate on pipes instead of tabs\n" +
       "  -D" + TIMESTAMP_CONF_KEY + "=currentTimeAsLong - use the specified timestamp for the import\n" +
       "  -D" + MAPPER_CONF_KEY + "=my.Mapper - A user-defined Mapper to use instead of " +
