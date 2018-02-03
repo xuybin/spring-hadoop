@@ -30,6 +30,8 @@ import org.apache.hadoop.hbase.io.ImmutableBytesWritable;
 import org.apache.hadoop.hbase.mapreduce.MultiTableOutputFormat;
 import org.apache.hadoop.hbase.mapreduce.TableInputFormat;
 import org.apache.hadoop.hbase.mapreduce.TableMapReduceUtil;
+import org.apache.hadoop.hbase.protobuf.ProtobufUtil;
+import org.apache.hadoop.hbase.util.Base64;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
@@ -113,7 +115,10 @@ public class IndexBuilder {
       }
     }
   }
-
+  static String convertScanToString(Scan scan) throws IOException {
+    org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Scan proto = ProtobufUtil.toScan(scan);
+    return Base64.encodeBytes(proto.toByteArray());
+  }
   /**
    * Job configuration.
    */
@@ -122,7 +127,7 @@ public class IndexBuilder {
     String tableName = args[0];
     String columnFamily = args[1];
     System.out.println("****" + tableName);
-    conf.set(TableInputFormat.SCAN, TableMapReduceUtil.convertScanToString(new Scan()));
+    conf.set(TableInputFormat.SCAN, convertScanToString(new Scan()));
     conf.set(TableInputFormat.INPUT_TABLE, tableName);
     conf.set("index.tablename", tableName);
     conf.set("index.familyname", columnFamily);
