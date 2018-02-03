@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:hdp="http://www.springframework.org/schema/hadoop"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="
+            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/hadoop http://www.springframework.org/schema/hadoop/spring-hadoop.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+           ">
+
+    <context:property-placeholder location="classpath:hadoop.properties" />
+
+    <!-- 配置hdfs和yarn的基本信息-->
+    <hdp:configuration id="hadoopConfiguration" file-system-uri="${fs.defaultFS}" rm-manager-uri="${yarn.resourcemanager.address}" />
+
+    <!-- 配置zookeeper地址和端口 -->
+    <hdp:hbase-configuration zk-quorum="${hbase.host}" zk-port="${hbase.port}"/>
+
+    <!-- 配置HbaseTemplate -->
+    <bean class="org.springframework.data.hadoop.hbase.HbaseTemplate">
+        <property name="configuration" ref="hbaseConfiguration"/>
+    </bean>
+
+</beans>
