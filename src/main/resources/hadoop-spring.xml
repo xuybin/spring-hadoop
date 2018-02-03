@@ -13,10 +13,10 @@
     <context:property-placeholder location="classpath:hadoop.properties" />
 
     <!-- 配置hdfs和yarn的基本信息-->
-    <hdp:configuration id="hadoopConfiguration" file-system-uri="${fs.defaultFS}" rm-manager-uri="${yarn.resourcemanager.address}" />
+    <hdp:configuration  file-system-uri="${fs.defaultFS}" rm-manager-uri="${yarn.resourcemanager.address}" />
 
     <!-- 配置zookeeper地址和端口 -->
-    <hdp:hbase-configuration  zk-quorum="${hbase.zk.host}" zk-port="${hbase.zk.port}"  />
+    <hdp:hbase-configuration  zk-quorum="${hbase.zk.host}" zk-port="${hbase.zk.port}"  stop-proxy="false" />
     <!-- 配置HbaseTemplate -->
     <bean class="org.springframework.data.hadoop.hbase.HbaseTemplate" p:configuration-ref="hbaseConfiguration"/>
 
