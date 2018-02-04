@@ -19,6 +19,7 @@
 package people.data.hadoop.service.mapreduce;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.TreeMap;
 
 import org.apache.hadoop.conf.Configuration;
@@ -36,7 +37,12 @@ import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.util.GenericOptionsParser;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.hadoop.hive.HiveRunner;
+import org.springframework.data.hadoop.batch.mapreduce.JarTasklet;
+import org.springframework.data.hadoop.batch.mapreduce.JobTasklet;
+import org.springframework.data.hadoop.batch.mapreduce.ToolTasklet;
 /**
  * Example map/reduce job to construct index tables that can be used to quickly
  * find a row based on the value of a column. It demonstrates:
@@ -68,6 +74,10 @@ import org.apache.hadoop.util.GenericOptionsParser;
  * </p>
  */
 public class IndexBuilder {
+
+  @Qualifier("hbaseConfiguration")
+  Configuration hbaseConfiguration;
+
   /** the column family containing the indexed row key */
   public static final byte[] INDEX_COLUMN = Bytes.toBytes("INDEX");
   /** the qualifier containing the indexed row key */
@@ -152,6 +162,11 @@ public class IndexBuilder {
       System.exit(-1);
     }
     Job job = configureJob(conf, otherArgs);
+    System.exit(job.waitForCompletion(true) ? 0 : 1);
+  }
+
+  public void runJob(String tableName,String columnFamily,String qualifier)throws Exception {
+    Job job = configureJob(hbaseConfiguration, new String[]{tableName,columnFamily,qualifier});
     System.exit(job.waitForCompletion(true) ? 0 : 1);
   }
 }
