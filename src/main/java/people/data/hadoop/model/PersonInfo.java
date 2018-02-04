@@ -1,6 +1,11 @@
 package people.data.hadoop.model;
 
 import org.apache.hadoop.hbase.util.Bytes;
+import org.apache.hadoop.util.StringUtils;
+
+import javax.crypto.Mac;
+import javax.crypto.SecretKey;
+import javax.crypto.spec.SecretKeySpec;
 
 public class PersonInfo {
     public static final String tableName="RHZY:PersonalInfo";
@@ -86,8 +91,24 @@ public class PersonInfo {
     String p0137;
     String p0138;
 
+    private static String key="RHZY@HBase";
+    public static String encryptHmac(String key, String data){
+        try {
+            SecretKey secretKey = new SecretKeySpec(Bytes.toBytes(key), "HmacMD5");
+            Mac mac = Mac.getInstance("HmacMD5");
+            mac.init(secretKey);
+            byte[] resultBytes = mac.doFinal(Bytes.toBytes(data));
+            String resultString = StringUtils.byteToHexString(resultBytes);
+            return resultString;
+        }catch (Exception ex){
+            return null;
+        }
+    }
 
     public String getRowKey() {
+        if(rowKey==null && p0101!=null){
+            return encryptHmac(key,p0101);
+        }
         return rowKey;
     }
 
