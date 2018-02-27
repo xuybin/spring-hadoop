@@ -24,7 +24,7 @@ public class PersonController {
     public Mono<PersonInfo> findOneCity(@PathVariable("rowkey") String rowkey) {
         return Mono.create(cityMonoSink ->{
             PersonInfo personInfo= personInfoService.findPersonInfoByRowKey(rowkey);
-            if(rowkey==null){
+            if(personInfo==null){
                 cityMonoSink.error(new Exception("not find"+rowkey));
             }else {
                 cityMonoSink.success(personInfo);
